@@ -74,15 +74,22 @@ namespace QVI_Vacay_API.Controllers
                 string UserId = string.Empty;
                 string ClientSystemName = ConfigSettings.ClientSystemName;
                 string ClientScreenName = ConfigSettings.ClientScreenNameLGN;
+                string authHeader = HttpContext.Request.Headers["Authorization"];
+
+                if (authHeader != null)
+                {
+                    currentToken = authHeader.Replace("Bearer ", "");
+                }
+                else
+                {
+                    currentToken = "";
+                }
 
                 response.Status = "Error";
                 response.ResultType = "Fail";
                 response.Message = "Something wrong";
                 response.Token = "";
                 response.AllowLogin = false;
-
-                string authHeader = HttpContext.Request.Headers["Authorization"];
-                currentToken = authHeader.Replace("Bearer ", "");
 
                 checkValidationStatus = clientData.ValidateUser(obj);
 
