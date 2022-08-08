@@ -7,7 +7,7 @@
     using System.Data;
 
 
-    public class CreateCreditData
+    public class RefundCreditData
     {
         string strconSSMS = ConfigSettings.SSMSconnection;
         string strconMysql = ConfigSettings.MySqlconnection;

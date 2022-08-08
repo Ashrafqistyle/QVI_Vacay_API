@@ -14,6 +14,7 @@ namespace QVI_Vacay_API.Data
         public static string ClientScreenNameUA { get; }
         public static string ClientScreenNameGR { get; }
         public static string ClientScreenNameCC { get; }
+        public static string ClientScreenNameCR { get; }
         public static string ClientURLHash { get; }
         public static string ClientURLToken { get; }
         public static string ClientURLSignup { get; }
@@ -33,6 +34,7 @@ namespace QVI_Vacay_API.Data
             ClientScreenNameUA = configurationBuilder.Build().GetSection("ConfigSettings:ClientScreenNameUA").Value;
             ClientScreenNameGR = configurationBuilder.Build().GetSection("ConfigSettings:ClientScreenNameGR").Value;
             ClientScreenNameCC = configurationBuilder.Build().GetSection("ConfigSettings:ClientScreenNameCC").Value;
+            ClientScreenNameCR = configurationBuilder.Build().GetSection("ConfigSettings:ClientScreenNameCR").Value;
             ClientURLHash = configurationBuilder.Build().GetSection("ConfigSettings:ClientURLHash").Value;
             ClientURLToken = configurationBuilder.Build().GetSection("ConfigSettings:ClientURLToken").Value;
             ClientURLSignup = configurationBuilder.Build().GetSection("ConfigSettings:ClientURLSignup").Value;
